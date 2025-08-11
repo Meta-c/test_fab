@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>FabAgent Test</title>
+    <script src="{{ url_for('static', filename='test.js') }}"></script>
     <script>
                 window.wxOConfiguration = {
                     orchestrationID: "eca560cb7ae14a64bfdda9f462c2cb79_c74c68d4-8fd1-4244-801e-46aaca162dc1",
@@ -19,7 +20,7 @@
 
                 setTimeout(function () {
                     const script = document.createElement('script');
-                    script.src = "test.js"; // Use relative path to the script
+                    script.src = "/static/test.js"; // Use relative path to the script
                     // `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
                     script.addEventListener('load', function () {
                         wxoLoader.init();
