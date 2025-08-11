@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FabAgent Test</title>
+    <script>
+                window.wxOConfiguration = {
+                    orchestrationID: "eca560cb7ae14a64bfdda9f462c2cb79_c74c68d4-8fd1-4244-801e-46aaca162dc1",
+                    hostURL: "https://eu-de.watson-orchestrate.cloud.ibm.com",
+                    rootElementID: "root",
+                    showLauncher: true,
+                    crn: "v1:bluemix:public:watsonx-orchestrate:eu-de:a/eca560cb7ae14a64bfdda9f462c2cb79:c74c68d4-8fd1-4244-801e-46aaca162dc1::",
+                    deploymentPlatform: "ibmcloud",
+                    chatOptions: {
+            agentId: "b416be31-2c70-4179-9467-f31f94d0137c",
+            agentEnvironmentId: "3c949ad1-be59-4e71-bc45-72ed52e5c1c7"
+        }
+                };
+
+                setTimeout(function () {
+                    const script = document.createElement('script');
+                    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+                    script.addEventListener('load', function () {
+                        wxoLoader.init();
+                    });
+                    document.head.appendChild(script);
+                }, 0);
+            </script>
+</head>
+<body>
