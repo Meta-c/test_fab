@@ -21,7 +21,8 @@
 
                 setTimeout(function () {
                     const script = document.createElement('script');
-                    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+                    script.src = "/static/test.js";
+                    // script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
                     script.addEventListener('load', function () {
                         wxoLoader.init();
                     });
