@@ -6,22 +6,22 @@
     <script src="{{ url_for('static', filename='test.js') }}"></script>
     <script>
                 window.wxOConfiguration = {
-                    orchestrationID: "eca560cb7ae14a64bfdda9f462c2cb79_c74c68d4-8fd1-4244-801e-46aaca162dc1",
-                    hostURL: "https://eu-de.watson-orchestrate.cloud.ibm.com",
+                    orchestrationID: "e4dcac9c25e9473485989a3a05ee4ec1_cb8b8276-189a-48d7-b1ea-0c5f3395ef88",
+                    hostURL: "https://us-south.watson-orchestrate.cloud.ibm.com",
                     rootElementID: "root",
                     showLauncher: true,
-                    crn: "v1:bluemix:public:watsonx-orchestrate:eu-de:a/eca560cb7ae14a64bfdda9f462c2cb79:c74c68d4-8fd1-4244-801e-46aaca162dc1::",
+                    crn: 
+                    "v1:bluemix:public:watsonx-orchestrate:us-south:a/e4dcac9c25e9473485989a3a05ee4ec1:cb8b8276-189a-48d7-b1ea-0c5f3395ef88::",
                     deploymentPlatform: "ibmcloud",
                     chatOptions: {
-            agentId: "b416be31-2c70-4179-9467-f31f94d0137c",
-            agentEnvironmentId: "3c949ad1-be59-4e71-bc45-72ed52e5c1c7"
+            agentId: "62e0c2e9-1c55-40ba-adf3-aeeabdf38239",
+            agentEnvironmentId: "b44df83f-a04a-4087-a3d5-0317d2cf0d03"
         }
                 };
 
                 setTimeout(function () {
                     const script = document.createElement('script');
-                    script.src = "/static/test.js"; // Use relative path to the script
-                    // `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+                    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
                     script.addEventListener('load', function () {
                         wxoLoader.init();
                     });
